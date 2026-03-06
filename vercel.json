@@ -1,7 +1,8 @@
 {
-  "buildCommand": "cd PlantApp_Front && npm install && npm run build",
+  "buildCommand": "cd PlantApp_Front && npm run build",
   "outputDirectory": "PlantApp_Front/dist/PlantApp_Front/browser",
-  "installCommand": "echo 'Skip root install'",
+  "installCommand": "cd PlantApp_Front && npm ci --legacy-peer-deps",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
