@@ -46,17 +46,6 @@ ng serve -o
 
 ---
 
-## 🌐 Desplegar
-
-Ver **[DEPLOY_SIMPLE.md](./DEPLOY_SIMPLE.md)** para instrucciones simples de despliegue.
-
-**Opciones rápidas**:
-- **Railway**: Todo en uno con Docker ($5/mes)
-- **Render**: Backend + Frontend gratis (con limitaciones)
-- **Vercel + Railway**: Frontend gratis + Backend $5/mes
-
----
-
 ## 🛠️ Tecnologías
 
 **Backend**: NestJS + TypeScript + APIs externas (Perenual, Pexels)  
