@@ -2,65 +2,92 @@
 
 Aplicación full-stack para explorar plantas, identificar enfermedades y acceder a una base de datos global de más de 10,000 especies.
 
-## 🎯 Características
-
-- ✅ **Catálogo de Plantas**: 18 plantas locales predefinidas
-- ✅ **Base de Datos Global**: Acceso a 10,000+ plantas vía API Perenual
-- ✅ **Identificación de Enfermedades**: 44 enfermedades comunes en plantas
-- ✅ **Búsqueda Avanzada**: Buscar plantas por nombre
-- ✅ **Imágenes Reales**: Integración con Pexels API
-- ✅ **Health Check**: Endpoints para monitoreo con cronjobs
-- ✅ **Docker Ready**: Desplegable con un comando
-
 ---
 
-## 🚀 Quick Start con Docker (Recomendado)
+## 🚀 Inicio Rápido
 
-### Requisitos
-- Docker Desktop instalado
-- 4GB RAM libre
-- 5GB espacio en disco
-
-### Iniciar la Aplicación
+### Opción 1: Con Docker (Recomendado)
 
 ```bash
-# 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/PlantApp.git
-cd PlantApp
-
-# 2. Configurar variables de entorno (opcional)
-cp .env.docker .env
-
-# 3. Iniciar con Docker
+# Iniciar todo con un comando
 docker-compose up --build
 ```
 
-**¡Listo!** Abre tu navegador:
-- 🎨 Frontend: http://localhost:4200
-- 🔧 Backend API: http://localhost:3000/api
-- 💚 Health Check: http://localhost:3000/api/ping
+Abre tu navegador:
+- 🎨 **Frontend**: http://localhost:4200
+- 🔧 **Backend**: http://localhost:3000/api
+- 💚 **Health**: http://localhost:3000/api/ping
+
+### Opción 2: Sin Docker
+
+```powershell
+# Terminal 1 - Backend
+cd plant-app_back
+npm install
+npm run start:dev
+
+# Terminal 2 - Frontend
+cd PlantApp_Front
+npm install
+ng serve -o
+```
+
+---
+
+## 📦 Lo que incluye
+
+- ✅ **18 plantas locales** con información detallada
+- ✅ **10,000+ plantas** vía API Perenual
+- ✅ **44 enfermedades** comunes en plantas
+- ✅ **Búsqueda** por nombre
+- ✅ **Imágenes reales** de alta calidad
+- ✅ **Health check endpoints** para monitoreo
+- ✅ **Dockerizado** (deploy fácil)
+
+---
+
+## 🌐 Desplegar
+
+Ver **[DEPLOY_SIMPLE.md](./DEPLOY_SIMPLE.md)** para instrucciones simples de despliegue.
+
+**Opciones rápidas**:
+- **Railway**: Todo en uno con Docker ($5/mes)
+- **Render**: Backend + Frontend gratis (con limitaciones)
+- **Vercel + Railway**: Frontend gratis + Backend $5/mes
 
 ---
 
 ## 🛠️ Tecnologías
 
-### Backend
-- **NestJS** - Framework Node.js
-- **TypeScript** - Lenguaje
-- **Axios** - HTTP client
-- **ConfigModule** - Variables de entorno
+**Backend**: NestJS + TypeScript + APIs externas (Perenual, Pexels)  
+**Frontend**: Angular 18 + Standalone Components  
+**Deploy**: Docker + Docker Compose
 
-### Frontend
-- **Angular 18** - Framework
-- **Standalone Components** - Sin módulos
-- **RxJS** - Programación reactiva
-- **TypeScript** - Lenguaje
+---
 
-### DevOps
-- **Docker** - Containerización
-- **Docker Compose** - Orquestación
-- **Nginx** - Servidor web para frontend
-- **Multi-stage builds** - Optimización de imágenes
+## 📚 Documentación
+
+- **[DEPLOY_SIMPLE.md](./DEPLOY_SIMPLE.md)** - Guía simple de despliegue
+- **[QUICK_START.md](./QUICK_START.md)** - Inicio rápido paso a paso
+- **[DOCKER_DEPLOYMENT.md](./DOCKER_DEPLOYMENT.md)** - Guía completa de Docker
+
+---
+
+## 🔑 API Keys
+
+Ya incluidas en el proyecto (para uso personal):
+- Perenual API: 300 requests/día
+- Pexels API: 200 requests/hora
+
+Si necesitas más, obtén las tuyas gratis:
+- Perenual: https://perenual.com/docs/api
+- Pexels: https://www.pexels.com/api/
+
+---
+
+## 🆘 Problemas?
+
+Ver [DEPLOY_SIMPLE.md](./DEPLOY_SIMPLE.md) en la sección "Solución de Problemas"
 - **RxJS** - Programación reactiva
 - **CSS moderno** - Estilos personalizados
 

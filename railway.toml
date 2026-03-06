@@ -1,0 +1,11 @@
+# Configuración para Railway (Backend)
+# Solo si despliegas en Railway
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "cd plant-app_back && npm install && npm run build"
+startCommand = "cd plant-app_back && npm run start:prod"
+
+[deploy]
+healthcheckPath = "/api/ping"
+healthcheckTimeout = 30

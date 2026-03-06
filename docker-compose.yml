@@ -12,11 +12,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
       - PORT=3000
       - CORS_ORIGIN=http://localhost:4200,http://localhost
-      - PERENUAL_API_KEY=${PERENUAL_API_KEY:-sk-exLE69aa5a751646615239}
-      - PEXELS_API_KEY=${PEXELS_API_KEY:-563492ad6f917000010000011234567890abcdef1234567890abcdef}
+      - PERENUAL_API_KEY=sk-exLE69aa5a751646615239
+      - PEXELS_API_KEY=563492ad6f917000010000011234567890abcdef1234567890abcdef
       - CACHE_TTL_HOURS=24
     networks:
       - plantapp-network
@@ -55,22 +54,10 @@ networks:
     driver: bridge
 
 # ==========================================
-# Uso:
+# COMANDOS SIMPLES:
 # ==========================================
-# Desarrollo:
-#   docker-compose up --build
-#
-# Producción:
-#   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-#
-# Detener:
-#   docker-compose down
-#
-# Ver logs:
-#   docker-compose logs -f
-#   docker-compose logs -f backend
-#   docker-compose logs -f frontend
-#
-# Reconstruir:
-#   docker-compose up --build --force-recreate
+# Iniciar:    docker-compose up --build
+# Detener:    docker-compose down
+# Ver logs:   docker-compose logs -f
+# Reiniciar:  docker-compose restart
 # ==========================================

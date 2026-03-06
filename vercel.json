@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "PlantApp_Front/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/plant-app-front/browser"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/PlantApp_Front/$1"
+    }
+  ],
+  "buildCommand": "cd PlantApp_Front && npm install && npm run build",
+  "outputDirectory": "PlantApp_Front/dist/plant-app-front/browser",
+  "installCommand": "cd PlantApp_Front && npm install"
+}
