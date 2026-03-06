@@ -24,7 +24,7 @@ export class EnvironmentService {
     // 3. En producción (Vercel)
     if (this.isProduction()) {
       // URL del backend desplegado - actualizar después de desplegar en Railway/Render
-      const productionApiUrl = 'https://plantapp-zrwb.onrender.com';
+      const productionApiUrl = 'https://plantapp-zrwb.onrender.com/api';
       console.log('🚀 Production mode, using:', productionApiUrl);
       return productionApiUrl;
     }
