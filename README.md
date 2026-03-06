@@ -1,73 +1,66 @@
-# 🌱 PlantApp - Blog de Plantas y Enfermedades
+# 🌱 PlantApp - Aplicación de Gestión de Plantas
 
-Una aplicación completa para aprender sobre plantas, sus cuidados y enfermedades. Desarrollado con **NestJS** (backend) y **Angular 21** (frontend). Integrado con **Perenual API** para acceder a datos reales de más de 10,000 especies.
+Aplicación full-stack para explorar plantas, identificar enfermedades y acceder a una base de datos global de más de 10,000 especies.
 
----
+## 🎯 Características
 
-## 🚀 Inicio Rápido
-
-### Para Iniciar la Aplicación:
-
-```powershell
-# Opción 1: Script automático (Recomendado)
-.\quick-start.ps1
-
-# Opción 2: Script con más detalles
-.\start-services.ps1
-```
-
-El navegador se abrirá automáticamente en http://localhost:4200
-
-### Para Detener:
-```powershell
-.\stop-services.ps1
-```
-
-📖 **Ver más detalles**: [INICIO-RAPIDO.md](INICIO-RAPIDO.md)
+- ✅ **Catálogo de Plantas**: 18 plantas locales predefinidas
+- ✅ **Base de Datos Global**: Acceso a 10,000+ plantas vía API Perenual
+- ✅ **Identificación de Enfermedades**: 44 enfermedades comunes en plantas
+- ✅ **Búsqueda Avanzada**: Buscar plantas por nombre
+- ✅ **Imágenes Reales**: Integración con Pexels API
+- ✅ **Health Check**: Endpoints para monitoreo con cronjobs
+- ✅ **Docker Ready**: Desplegable con un comando
 
 ---
 
-## 📋 Características
+## 🚀 Quick Start con Docker (Recomendado)
 
-### ✅ Implementado
-- **Catálogo de Plantas**: Explora diferentes tipos de plantas con información detallada
-  - Nombre científico y común
-  - Nivel de cuidado (fácil, medio, difícil)
-  - Requisitos de riego, luz solar y temperatura
-  - Filtros por categoría (Interior, Huerto, etc.)
-  
-- **Base de Datos de Enfermedades**: Aprende sobre problemas comunes
-  - Enfermedades por hongos, bacterias, virus
-  - Plagas y deficiencias nutricionales
-  - Síntomas detallados
-  - Tratamientos y prevención
-  - Filtros por tipo de enfermedad
-  
-- **Información Detallada**: 
-  - Vista detallada de cada planta
-  - Enfermedades comunes asociadas a cada planta
-  - Vista detallada de cada enfermedad con guías de tratamiento
+### Requisitos
+- Docker Desktop instalado
+- 4GB RAM libre
+- 5GB espacio en disco
 
-- **Integración con Perenual API (GRATIS)** 🎉:
-  - ✅ Búsqueda de más de 10,000 especies reales
-  - ✅ Filtros por interior/exterior, tóxicas/seguras
-  - ✅ Información completa de cuidados
-  - ✅ Base de datos de plagas y enfermedades
-  - ✅ Imágenes reales de alta calidad
-  - ✅ 300 requests gratis por día
+### Iniciar la Aplicación
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/PlantApp.git
+cd PlantApp
+
+# 2. Configurar variables de entorno (opcional)
+cp .env.docker .env
+
+# 3. Iniciar con Docker
+docker-compose up --build
+```
+
+**¡Listo!** Abre tu navegador:
+- 🎨 Frontend: http://localhost:4200
+- 🔧 Backend API: http://localhost:3000/api
+- 💚 Health Check: http://localhost:3000/api/ping
+
+---
 
 ## 🛠️ Tecnologías
 
 ### Backend
-- **NestJS 11** - Framework de Node.js
-- **TypeScript** - Tipado estático
-- **API RESTful** - Arquitectura REST
-- **Perenual API** - Base de datos real de plantas 🌟
+- **NestJS** - Framework Node.js
+- **TypeScript** - Lenguaje
+- **Axios** - HTTP client
+- **ConfigModule** - Variables de entorno
 
 ### Frontend
-- **Angular 21** - Framework SPA
-- **TypeScript** - Tipado estático
+- **Angular 18** - Framework
 - **Standalone Components** - Sin módulos
+- **RxJS** - Programación reactiva
+- **TypeScript** - Lenguaje
+
+### DevOps
+- **Docker** - Containerización
+- **Docker Compose** - Orquestación
+- **Nginx** - Servidor web para frontend
+- **Multi-stage builds** - Optimización de imágenes
 - **RxJS** - Programación reactiva
 - **CSS moderno** - Estilos personalizados
 
