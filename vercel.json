@@ -1,7 +1,7 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd PlantApp_Front && npm install && npm run build",
   "outputDirectory": "PlantApp_Front/dist/PlantApp_Front/browser",
-  "installCommand": "npm install",
+  "installCommand": "echo 'Skip root install'",
   "rewrites": [
     {
       "source": "/(.*)",

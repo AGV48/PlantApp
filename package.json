@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd PlantApp_Front && npm install && npm run build",
-    "install": "cd PlantApp_Front && npm install"
+    "build": "cd PlantApp_Front && npm ci && npm run build"
   }
 }
