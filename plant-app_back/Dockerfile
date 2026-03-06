@@ -1,15 +1,15 @@
 # ==================================
 # Stage 1: Build
 # ==================================
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
 # Copiar package files
 COPY package*.json ./
 
-# Instalar dependencias
-RUN npm ci --only=production && npm cache clean --force
+# Instalar TODAS las dependencias (incluyendo devDependencies para el build)
+RUN npm ci && npm cache clean --force
 
 # Copiar código fuente
 COPY . .
@@ -20,13 +20,13 @@ RUN npm run build
 # ==================================
 # Stage 2: Production
 # ==================================
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
 # Instalar solo dependencias de producción
 COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --omit=dev && npm cache clean --force
 
 # Copiar código compilado desde el builder
 COPY --from=builder /app/dist ./dist
